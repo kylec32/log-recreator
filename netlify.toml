@@ -1,0 +1,12 @@
+[build]
+  publish = "dist/log-recreator"
+
+  # Default build command.
+  command = "npm run build"
+
+  functions = "functions"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200

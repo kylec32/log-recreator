@@ -1,0 +1,13 @@
+<span>Server Details: </span>
+<mat-form-field class="authentication-item">
+  <input matInput placeholder="ElasticSearch URL" [(ngModel)]="url" (blur)="updateStatus()">
+</mat-form-field>
+<mat-form-field class="authentication-item">
+  <input matInput placeholder="Username" [(ngModel)]="username" (blur)="updateStatus()">
+</mat-form-field>
+<mat-form-field class="authentication-item">
+  <input matInput type="password" placeholder="Password" [(ngModel)]="password" (blur)="updateStatus()">
+</mat-form-field>
+<span>
+  {{status}}
+</span>
