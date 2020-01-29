@@ -10,7 +10,10 @@ exports.handler = function(event, context, callback) {
          'Authorization': `Basic ${Buffer.from(`${request.username}:${request.password}`).toString('base64')}`
        }
      });
-    let jsonResponse = await response.text();
+     console.log(JSON.stringify(response));
+     let jsonResponse = await response.text();
+    
+    console.log(response.status);
     callback(null, {
       statusCode: response.status,
       body: jsonResponse
