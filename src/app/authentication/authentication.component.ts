@@ -9,9 +9,9 @@ import { Observable } from 'rxjs';
 })
 export class AuthenticationComponent implements OnInit {
 
-  url: string;
+  url: string = "https://tselastic.mclabs.cloud:9243/";
   username: string;
-  password: string;
+  password: string = "2q3W@9OU1*41yvmE";
   status: string = "";
 
   constructor(private elasticSearchService: ElasticSearchService) { }

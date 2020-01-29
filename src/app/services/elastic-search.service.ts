@@ -11,8 +11,14 @@ export class ElasticSearchService {
   constructor(private http: HttpClient) { }
 
   checkCredentials(url:string, username:string, password:string):Observable<boolean> {
-    return this.http.get(url, {
-      'headers': this.getBasicAuthenticationHeader(username, password),
+    let body = {
+      'url':url,
+      'method':'GET',
+      'username':username,
+      'password':password
+    }
+
+    return this.http.post('https://youthful-lalande-1da4a0.netlify.com/api/proxy', body, {
       'observe': 'response'
     })
       .pipe(
