@@ -18,7 +18,7 @@ export class ElasticSearchService {
       'password':password
     }
 
-    return this.http.post('https://youthful-lalande-1da4a0.netlify.com/api/proxy', body, {
+    return this.http.post('/api/proxy', body, {
       'observe': 'response'
     })
       .pipe(
