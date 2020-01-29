@@ -29,7 +29,8 @@ export class AuthenticationComponent implements OnInit {
     this.status = "Checking";
 
     this.elasticSearchService.checkCredentials(this.url, this.username, this.password)
-      .subscribe(result => this.status = result ? "OK" : "Invalid");
+      .subscribe(result => this.status = result ? "OK" : "Invalid",
+                  error => this.status = 'Invalid Credentials');
 
   }
 
