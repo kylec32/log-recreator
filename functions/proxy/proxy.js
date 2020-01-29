@@ -12,7 +12,7 @@ exports.handler = function(event, context, callback) {
      });
     let jsonResponse = await response.text();
     callback(null, {
-      statusCode: 200,
+      statusCode: response.status,
       body: jsonResponse
     });
   })();
