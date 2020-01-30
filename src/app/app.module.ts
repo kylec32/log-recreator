@@ -8,15 +8,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 import { AuthenticationComponent } from './authentication/authentication.component'
 
 import { ElasticSearchService } from './services/elastic-search.service';
+import { QueryComponent } from './query/query.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AuthenticationComponent
+    AuthenticationComponent,
+    QueryComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +27,7 @@ import { ElasticSearchService } from './services/elastic-search.service';
     FormsModule,
     HttpClientModule,
     MatInputModule,
+    MatButtonModule,
     AppRoutingModule
   ],
   providers: [ElasticSearchService],

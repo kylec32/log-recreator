@@ -32,3 +32,17 @@ export class ElasticSearchService {
       });
   }
 }
+
+// {
+// 	"_source":["message","log.offset"],
+// 	"query": {
+// 		"term": {
+// 			"log.file.path": {
+// 				"value": "G:\\git\\mastercontrol\\installedServices\\applicationTGO2\\WEB-INF\\lucee\\logs\\exception.log"
+// 			}
+// 		}
+// 	},
+// 	"sort": {
+// 		"log.offset": {"order":"asc"}
+// 	}
+// }
